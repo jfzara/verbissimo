@@ -6,7 +6,7 @@ import { RouterOutlet } from '@angular/router'; // Importation pour RouterOutlet
 import { HttpClientModule } from '@angular/common/http'; // Importation pour HttpClient
 
 @Component({
-  selector: 'app-sign-up', // Sélecteur pour le composant
+  selector: 'app-sign-up', // Sélecteur pour le composant..
   standalone: true, // Indique que ce composant est autonome
   imports: [FormsModule, RouterOutlet, HttpClientModule], // Importation des modules nécessaires
   templateUrl: './sign-up.component.html', // Lien vers le fichier HTML du composant
