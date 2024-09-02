@@ -1,0 +1,12 @@
+
+<div class="auth-container">
+    <div class="form-toggle">
+      <button (click)="toggleForm()" [class.active]="showLogin">Connexion</button>
+      <button (click)="toggleForm()" [class.active]="!showLogin">Inscription</button>
+    </div>
+  
+    <div class="form-content">
+      <app-login *ngIf="showLogin"></app-login> <!-- Formulaire de connexion -->
+      <app-sign-up *ngIf="!showLogin"></app-sign-up> <!-- Formulaire d'inscription -->
+    </div>
+  </div>
