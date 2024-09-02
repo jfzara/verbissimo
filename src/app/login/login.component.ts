@@ -28,8 +28,12 @@ export class LoginComponent {
     this.authService.login(user.email, user.password).subscribe(
       response => {
         console.log('Connexion réussie', response); // Afficher la réponse de l'API
-        localStorage.setItem('userToken', response.token); // Stocker le token d'utilisateur dans le local storage (si retourné)
-        this.router.navigate(['/']); // Rediriger l'utilisateur vers la page d'accueil ou une autre page
+        if (response && response.token) { // Vérification si un token est retourné
+          localStorage.setItem('userToken', response.token); // Stocker le token d'utilisateur dans le local storage
+          this.router.navigate(['/verb-search']); // Rediriger l'utilisateur vers la page de recherche de verbes
+        } else {
+          console.error('Token non retourné');
+        }
       },
       error => {
         console.error('Erreur lors de la connexion', error); // Afficher l'erreur en cas de problème
