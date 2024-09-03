@@ -6,7 +6,6 @@ import { catchError } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
-
 export class VerbService {
   private apiUrl = 'https://seal-app-v5cj7.ondigitalocean.app/v0/verbs/'; // URL de l'API
 
@@ -26,14 +25,13 @@ export class VerbService {
     );
   }
 
-  // Méthode pour récupérer un nombre donné de verbes aléatoires
-  getRandomVerbs(quantity: number, token: string): Observable<any[]> { // Spécifiez le type de retour
+  // Méthode pour obtenir des verbes aléatoires
+  getRandomVerbs(quantity: number, token: string): Observable<any> {
     const headers = new HttpHeaders({
       'x-access-token': token // Ajoute le token d'authentification dans les en-têtes
     });
-
-    // Effectue une requête POST pour récupérer des verbes aléatoires
-    return this.http.post<any[]>(`${this.apiUrl}random`, { quantity }, { headers }).pipe(
+  
+    return this.http.post(`${this.apiUrl}random`, { quantity }, { headers }).pipe(
       catchError(error => {
         console.error('Erreur lors de la récupération des verbes aléatoires:', error);
         return throwError('Une erreur est survenue lors de la récupération des verbes aléatoires.');

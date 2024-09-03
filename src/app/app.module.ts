@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app.routes';
 import { VerbModule } from '../verb/verb.module'; // Importation du module VerbModule
 import { FormsModule } from '@angular/forms'; // Importation de FormsModule
 
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -14,8 +15,6 @@ import { FormsModule } from '@angular/forms'; // Importation de FormsModule
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [] // Assurez-vous d'ajouter votre composant racine ici si nécessaire
+  
 })
 export class AppModule { }
-
-

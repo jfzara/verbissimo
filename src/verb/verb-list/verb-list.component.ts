@@ -15,23 +15,29 @@ export class VerbListComponent {
   constructor(private verbService: VerbService, private router: Router) {}
 
   fetchRandomVerbs() {
+    console.log('fetchRandomVerbs called with:', this.numberOfVerbs);
+
     if (this.numberOfVerbs < 2 || this.numberOfVerbs > 20) {
       this.errorMessage = 'Veuillez choisir un nombre entre 2 et 20.';
       this.randomVerbs = []; // Réinitialiser la liste en cas d'erreur
+      console.log(this.errorMessage);
       return;
     }
 
     const token = localStorage.getItem('userToken'); // Récupérer le token depuis le localStorage
+    console.log('Token:', token);
 
     if (!token) {
       this.errorMessage = 'Le token est manquant. Veuillez vous authentifier.';
+      console.log(this.errorMessage);
       return;
     }
 
     // Appeler le service pour obtenir des verbes aléatoires
     this.verbService.getRandomVerbs(this.numberOfVerbs, token).subscribe(
-      verbs => {
-        this.randomVerbs = verbs; // Mettre à jour la liste des verbes aléatoires
+      response => { // Changer 'verbs' à 'response' ici
+        console.log('Verbes récupérés:', response);
+        this.randomVerbs = response.verbs; // Assurez-vous d'accéder à la bonne propriété
         this.errorMessage = ''; // Réinitialiser le message d'erreur
       },
       error => {
