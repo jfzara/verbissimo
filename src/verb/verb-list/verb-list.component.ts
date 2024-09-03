@@ -1,16 +1,19 @@
 import { Component } from '@angular/core';
-import { VerbService } from '../../app/services/verb.service';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { Router } from '@angular/router';
-import { CommonModule } from '@angular/common';
+import { VerbService } from '../../app/services/verb.service'; // Assurez-vous que le chemin est correct
+import { CommonModule } from '@angular/common'; // Importation nécessaire
+import { FormsModule } from '@angular/forms'; // Importation nécessaire
 import { VerbConjugationComponent } from '../../app/verb-conjugation/verb-conjugation.component';
-import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-verb-list',
   standalone: true,
   templateUrl: './verb-list.component.html',
   styleUrls: ['./verb-list.component.css'],
-  imports: [CommonModule, VerbConjugationComponent, FormsModule]
+  imports: [MatCardModule, MatFormFieldModule, MatInputModule, CommonModule, FormsModule, VerbConjugationComponent] // Ajoutez ici
 })
 export class VerbListComponent {
   numberOfVerbs: number = 2;
@@ -35,19 +38,18 @@ export class VerbListComponent {
     }
 
     this.verbService.getRandomVerbs(this.numberOfVerbs, token).subscribe(
-      response => {
+      (response: { verbs: string[] }) => {
         this.randomVerbs = response.verbs;
         this.errorMessage = '';
         this.selectedVerb = undefined;
       },
-      error => {
+      (error: any) => {
         console.error('Erreur lors de la récupération des verbes', error);
         this.errorMessage = 'Une erreur s\'est produite. Veuillez réessayer.';
       }
     );
   }
 
-  // Méthode pour retourner à la page de choix
   goToChoicePage() {
     this.router.navigate(['/choice']); // Remplacez '/choice' par le chemin de votre page de choix
   }

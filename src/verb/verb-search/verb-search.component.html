@@ -1,14 +1,20 @@
-<div>
-  <h2>Recherche de Verbe</h2>
-  <div>
-    <button (click)="goToChoicePage()">Retour à la page de choix</button>
-    <!-- Autres contenus de votre composant -->
-  </div>
-  <input [(ngModel)]="verb" (keydown.enter)="searchVerb()" placeholder="Entrez un verbe" />
-  <button (click)="searchVerb()">Rechercher</button> <!-- Bouton pour déclencher la recherche -->
+<mat-card>
+  <mat-card-header>
+    <h2>Recherche de Verbe</h2>
+  </mat-card-header>
+  <mat-card-content>
+    <button mat-button (click)="goToChoicePage()">Retour à la page de choix</button>
 
-  <div *ngIf="verbInfo"> <!-- Affiche les informations si verbInfo est défini -->
-    <h3>Informations sur le verbe : {{ verb }}</h3>
-    <pre>{{ verbInfo | json }}</pre> <!-- Affiche les données sous forme de JSON -->
-  </div>
-</div>
+    <mat-form-field appearance="fill">
+      <mat-label>Entrez un verbe</mat-label>
+      <input matInput [(ngModel)]="verb" (keydown.enter)="searchVerb()" placeholder="Entrez un verbe" />
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="searchVerb()">Rechercher</button> <!-- Bouton pour déclencher la recherche -->
+
+    <div *ngIf="verbInfo"> <!-- Affiche les informations si verbInfo est défini -->
+      <h3>Informations sur le verbe : {{ verb }}</h3>
+      <pre>{{ verbInfo | json }}</pre> <!-- Affiche les données sous forme de JSON -->
+    </div>
+  </mat-card-content>
+</mat-card>

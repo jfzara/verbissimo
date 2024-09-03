@@ -4,11 +4,23 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { VerbService } from '../../app/services/verb.service';
 import { Router } from '@angular/router';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @Component({
   selector: 'app-verb-search',
   standalone: true,
-  imports: [FormsModule, CommonModule, HttpClientModule],
+  imports: [
+    FormsModule,
+    CommonModule,
+    HttpClientModule,
+    MatCardModule,
+    MatButtonModule,
+    MatInputModule,
+    MatFormFieldModule
+  ],
   templateUrl: './verb-search.component.html',
   styleUrls: ['./verb-search.component.css']
 })
@@ -16,16 +28,11 @@ export class VerbSearchComponent {
   verb: string = '';
   verbInfo: any;
 
-  constructor(private verbService: VerbService, private router: Router) { }
+  constructor(private verbService: VerbService, private router: Router) {}
 
   searchVerb() {
-    const token = localStorage.getItem('userToken') ?? ''; // Utilisez une chaîne vide si le token est null
-
-    if (!token) {
-      console.error('Le token est manquant. Veuillez vous authentifier.');
-      return; // Arrêtez l'exécution si le token est vide
-    }
-
+    const token: string = localStorage.getItem('userToken') ?? ''; // Fournit une valeur par défaut
+  
     this.verbService.getVerbs(this.verb, token).subscribe(
       (data) => {
         this.verbInfo = data;
