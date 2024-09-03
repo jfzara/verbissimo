@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms'; // Import du FormsModule pour ngModel
 import { CommonModule } from '@angular/common'; // Import du CommonModule pour les pipes comme json
 import { HttpClientModule } from '@angular/common/http';
-import { VerbService } from '../services/verb.service'; // Importation du service
+import { VerbService } from '../../app/services/verb.service'; // Importation du service
 import { Router } from '@angular/router'; // Pour la navigation
 
 @Component({

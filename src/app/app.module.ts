@@ -1,21 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms'; 
 import { AppRoutingModule } from './app.routes';
-import { VerbSearchComponent } from './verb-search/verb-search.component'; 
+import { VerbModule } from '../verb/verb.module'; // Importation du module VerbModule
 
 @NgModule({
-  declarations: [
-    VerbSearchComponent // Déclaration du composant VerbSearchComponent
-  ],
   imports: [
-    BrowserModule, 
-    HttpClientModule, 
-    FormsModule, // Importation de FormsModule pour utiliser ngModel
+    BrowserModule,
+    HttpClientModule,
+    VerbModule,
     AppRoutingModule
   ],
-  providers: [],
-  bootstrap: []
+  providers: []
 })
 export class AppModule { }
