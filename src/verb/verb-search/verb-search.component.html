@@ -1,5 +1,9 @@
 <div>
   <h2>Recherche de Verbe</h2>
+  <div>
+    <button (click)="goToChoicePage()">Retour à la page de choix</button>
+    <!-- Autres contenus de votre composant -->
+  </div>
   <input [(ngModel)]="verb" (keydown.enter)="searchVerb()" placeholder="Entrez un verbe" />
   <button (click)="searchVerb()">Rechercher</button> <!-- Bouton pour déclencher la recherche -->
 

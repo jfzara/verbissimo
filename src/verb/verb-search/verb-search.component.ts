@@ -1,34 +1,43 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms'; // Import du FormsModule pour ngModel
-import { CommonModule } from '@angular/common'; // Import du CommonModule pour les pipes comme json
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { VerbService } from '../../app/services/verb.service'; // Importation du service
-import { Router } from '@angular/router'; // Pour la navigation
+import { VerbService } from '../../app/services/verb.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-verb-search',
-  standalone: true, // Indique que ce composant est autonome
-  imports: [FormsModule, CommonModule, HttpClientModule], // Importation des modules nécessaires
+  standalone: true,
+  imports: [FormsModule, CommonModule, HttpClientModule],
   templateUrl: './verb-search.component.html',
   styleUrls: ['./verb-search.component.css']
 })
 export class VerbSearchComponent {
-  verb: string = ''; // Pour stocker le verbe entré par l'utilisateur
-  verbInfo: any; // Pour stocker les informations du verbe récupérées
+  verb: string = '';
+  verbInfo: any;
 
   constructor(private verbService: VerbService, private router: Router) { }
 
-  // Méthode pour rechercher le verbe
   searchVerb() {
-    const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImpmemFyYXRlc3RAZ21haWwuY29tIiwidWlkIjoiNjZkNTM0ODUyNmZjNmRmMmIxMTZjZjc2IiwiZXhwIjoxNzI3ODgyODM2fQ.C6Ea-CZxUCR5Z19aaZ1BLDkWicmI10lKJHOrXqVM5mU'; // Votre token JWT
+    const token = localStorage.getItem('userToken') ?? ''; // Utilisez une chaîne vide si le token est null
+
+    if (!token) {
+      console.error('Le token est manquant. Veuillez vous authentifier.');
+      return; // Arrêtez l'exécution si le token est vide
+    }
 
     this.verbService.getVerbs(this.verb, token).subscribe(
       (data) => {
-        this.verbInfo = data; // Stocke les données récupérées
+        this.verbInfo = data;
       },
       (error) => {
         console.error('Erreur lors de la récupération des informations du verbe:', error);
       }
     );
+  }
+
+  // Méthode pour retourner à la page de choix
+  goToChoicePage() {
+    this.router.navigate(['/choice']); // Remplacez '/choice' par le chemin de votre page de choix
   }
 }
