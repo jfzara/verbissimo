@@ -34,3 +34,30 @@ h2 {
     padding: 10px; /* Rembourrage pour les éléments de la liste */
     border-radius: 5px; /* Coins arrondis pour les éléments de la liste */
   }
+
+  .verb-list-container {
+    padding: 20px;
+  }
+  
+  .verb-item {
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .verb-item:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .info-message {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #e7f3fe;
+    border: 1px solid #b3d4fc;
+    border-radius: 4px;
+    color: #3178c6;
+    font-weight: bold;
+  }

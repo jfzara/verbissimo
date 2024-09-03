@@ -1,13 +1,13 @@
 <div class="verb-list-container">
   <h2>Obtenez des Verbes Aléatoires</h2>
 
-  <label for="numberOfVerbs">Choisissez le nombre de verbes aléatoires (2 à 20) :</label>
+  <label for="numberOfVerbs">Choisissez le nombre de verbes aléatoires (2 à 10) :</label>
   <input
     type="number"
     id="numberOfVerbs"
     [(ngModel)]="numberOfVerbs"
     min="2"
-    max="20"
+    max="10"
     required
     (change)="errorMessage = ''" />
     
@@ -18,11 +18,13 @@
   <div *ngIf="randomVerbs.length > 0">
     <h3>Verbes Aléatoires</h3>
     <ul>
-      <li *ngFor="let verb of randomVerbs" (click)="selectedVerb = verb">{{ verb }}</li>
+      <li *ngFor="let verb of randomVerbs" (click)="selectedVerb = verb" class="verb-item">
+        {{ verb }}
+      </li>
     </ul>
+    <div class="info-message">Cliquez sur un verbe pour afficher sa conjugaison.</div>
   </div>
 
   <app-verb-conjugation *ngIf="selectedVerb" [verb]="selectedVerb"></app-verb-conjugation>
 </div>
-
  
