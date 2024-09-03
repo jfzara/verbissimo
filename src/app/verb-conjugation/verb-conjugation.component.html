@@ -1,0 +1,5 @@
+<div *ngIf="verbInfo">
+    <h3>Conjugaison du verbe : {{ verb }}</h3>
+    <pre>{{ verbInfo | json }}</pre>
+  </div>
+  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>

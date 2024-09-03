@@ -1,18 +1,22 @@
 import { Component } from '@angular/core';
 import { VerbService } from '../services/verb.service';
 import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common'; // Ajoutez cela
+import { FormsModule } from '@angular/forms'; // Ajoutez cela
 
 @Component({
   selector: 'app-verb-random',
+  standalone: true,
   templateUrl: './verb-random.component.html',
-  styleUrls: ['./verb-random.component.css']
+  styleUrls: ['./verb-random.component.css'],
+  imports: [CommonModule, FormsModule] // Importez les modules nécessaires
 })
 export class VerbRandomComponent {
   numberOfVerbs: number = 2; // Valeur par défaut
   randomVerbs: string[] = [];
   errorMessage: string = '';
 
-  constructor(public verbService: VerbService, public router: Router) {} // Déclare router comme public
+  constructor(public verbService: VerbService, public router: Router) {}
 
   getRandomVerbs() {
     if (this.numberOfVerbs < 2 || this.numberOfVerbs > 20) {

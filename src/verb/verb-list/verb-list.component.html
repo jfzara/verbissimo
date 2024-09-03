@@ -18,7 +18,11 @@
   <div *ngIf="randomVerbs.length > 0">
     <h3>Verbes Aléatoires</h3>
     <ul>
-      <li *ngFor="let verb of randomVerbs">{{ verb }}</li>
+      <li *ngFor="let verb of randomVerbs" (click)="selectedVerb = verb">{{ verb }}</li>
     </ul>
   </div>
+
+  <app-verb-conjugation *ngIf="selectedVerb" [verb]="selectedVerb"></app-verb-conjugation>
 </div>
+
+ 
