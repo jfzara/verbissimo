@@ -1,20 +1,20 @@
 import { Component } from '@angular/core';
-import { VerbService } from '../../app/services/verb.service';
+import { VerbService } from '../services/verb.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-verb-list',
-  templateUrl: './verb-list.component.html',
-  styleUrls: ['./verb-list.component.css']
+  selector: 'app-verb-random',
+  templateUrl: './verb-random.component.html',
+  styleUrls: ['./verb-random.component.css']
 })
-export class VerbListComponent {
+export class VerbRandomComponent {
   numberOfVerbs: number = 2; // Valeur par défaut
   randomVerbs: string[] = [];
   errorMessage: string = '';
 
-  constructor(private verbService: VerbService, private router: Router) {}
+  constructor(public verbService: VerbService, public router: Router) {} // Déclare router comme public
 
-  fetchRandomVerbs() {
+  getRandomVerbs() {
     if (this.numberOfVerbs < 2 || this.numberOfVerbs > 20) {
       this.errorMessage = 'Veuillez choisir un nombre entre 2 et 20.';
       this.randomVerbs = []; // Réinitialiser la liste en cas d'erreur
@@ -24,11 +24,10 @@ export class VerbListComponent {
     const token = localStorage.getItem('userToken'); // Récupérer le token depuis le localStorage
 
     if (!token) {
-      this.errorMessage = 'Le token est manquant. Veuillez vous authentifier.';
+      this.errorMessage = 'Utilisateur non authentifié.';
       return;
     }
 
-    // Appeler le service pour obtenir des verbes aléatoires
     this.verbService.getRandomVerbs(this.numberOfVerbs, token).subscribe(
       verbs => {
         this.randomVerbs = verbs; // Mettre à jour la liste des verbes aléatoires

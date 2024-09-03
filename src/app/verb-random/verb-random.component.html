@@ -1,0 +1,23 @@
+<div class="random-verb-container">
+    <h1>Bienvenue sur l'application Verbissimo</h1>
+    <h2>Liste des Verbes Aléatoires</h2>
+  
+    <label for="numberOfVerbs">Choisissez le nombre de verbes aléatoires (2 à 20) :</label>
+    <input
+      type="number"
+      id="numberOfVerbs"
+      [(ngModel)]="numberOfVerbs"
+      min="2"
+      max="20"
+      (change)="errorMessage = ''" />
+    
+    <button (click)="getRandomVerbs()">Obtenir {{ numberOfVerbs }} verbes aléatoires</button>
+    
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+    
+    <ul>
+      <li *ngFor="let verb of randomVerbs">{{ verb }}</li>
+    </ul>
+  
+    <button (click)="router.navigate(['/choice'])">Revenir aux choix</button>
+  </div>

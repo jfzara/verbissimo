@@ -1,23 +1,19 @@
-<div>
-  <h2>Liste des Verbes</h2>
-  <!-- Champ de texte pour entrer un verbe -->
-  <input type="text" [(ngModel)]="verb" (keydown.enter)="fetchAllVerbs()" placeholder="Entrez un verbe" />
-  <!-- Bouton pour déclencher la recherche de verbes -->
-  <button (click)="fetchAllVerbs()">Rechercher Verbe</button>
+<div class="verb-list-container">
+  <h2>Obtenez des Verbes Aléatoires</h2>
 
-  <!-- Affichage des verbes récupérés -->
-  <div *ngIf="verbs.length > 0">
-    <h3>Verbes trouvés</h3>
-    <ul>
-      <li *ngFor="let verb of verbs">{{ verb }}</li>
-    </ul>
-  </div>
-
-  <h2>Verbes Aléatoires</h2>
-  <!-- Bouton pour obtenir des verbes aléatoires -->
-  <button (click)="fetchRandomVerbs(5)">Obtenir 5 verbes aléatoires</button>
-
-  <!-- Affichage des verbes aléatoires récupérés -->
+  <label for="numberOfVerbs">Choisissez le nombre de verbes aléatoires (2 à 20) :</label>
+  <input
+    type="number"
+    id="numberOfVerbs"
+    [(ngModel)]="numberOfVerbs"
+    min="2"
+    max="20"
+    (change)="errorMessage = ''" />
+    
+  <button (click)="fetchRandomVerbs()">Obtenir {{ numberOfVerbs }} verbes aléatoires</button>
+  
+  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+  
   <div *ngIf="randomVerbs.length > 0">
     <h3>Verbes Aléatoires</h3>
     <ul>
