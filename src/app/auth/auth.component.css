@@ -1,0 +1,26 @@
+.auth-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  
+  .form-card {
+    width: 400px;
+  }
+  
+  .form-toggle {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  button.active {
+    font-weight: bold;
+    background-color: #1976d2; /* Changez cela selon votre palette de couleurs */
+    color: white;
+  }
+  
+  .form-content {
+    padding: 20px 0;
+  }

@@ -1,12 +1,19 @@
-
 <div class="auth-container">
-    <div class="form-toggle">
-      <button (click)="toggleForm()" [class.active]="showLogin">Connexion</button>
-      <button (click)="toggleForm()" [class.active]="!showLogin">Inscription</button>
-    </div>
-  
-    <div class="form-content">
+  <mat-card class="form-card">
+    <mat-card-header>
+      <div class="form-toggle">
+        <button mat-button (click)="toggleForm()" [class.active]="!showLogin" color="accent">
+          Je m'inscris
+        </button>
+        <button mat-button (click)="logout()" *ngIf="isLoggedIn" color="warn">
+          Déconnexion
+        </button>
+      </div>
+    </mat-card-header>
+    
+    <mat-card-content class="form-content">
       <app-login *ngIf="showLogin"></app-login> <!-- Formulaire de connexion -->
       <app-sign-up *ngIf="!showLogin"></app-sign-up> <!-- Formulaire d'inscription -->
-    </div>
-  </div>
+    </mat-card-content>
+  </mat-card>
+</div>

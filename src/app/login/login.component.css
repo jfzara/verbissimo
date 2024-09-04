@@ -1,0 +1,65 @@
+body {
+    background-color: #f0f4f8; /* Une couleur de fond légère et agréable */
+    font-family: 'Arial', sans-serif; /* Police agréable */
+  }
+  
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 400px; /* Limiter la largeur pour le rendre plus compact */
+    background-color: white; /* Fond blanc pour le formulaire */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre douce */
+  }
+  
+  form {
+    width: 100%; /* S'assurer que le formulaire occupe toute la largeur */
+  }
+  
+  div {
+    margin-bottom: 15px; /* Espacement entre les champs */
+  }
+  
+  label {
+    display: block; /* S'assurer que le label prend toute la largeur */
+    margin-bottom: 5px; /* Espacement sous le label */
+    color: #2c3e50; /* Couleur du texte */
+  }
+  
+  input {
+    width: 100%; /* Champ d'entrée prenant toute la largeur */
+    padding: 10px; /* Rembourrage pour les champs d'entrée */
+    border: 1px solid #ccc; /* Bordure grise */
+    border-radius: 4px; /* Coins arrondis */
+    transition: border-color 0.3s; /* Transition pour les interactions */
+  }
+  
+  input:focus {
+    border-color: #27ae60; /* Couleur de la bordure au focus */
+    outline: none; /* Supprimer le contour par défaut */
+  }
+  
+  button {
+    background-color: #27ae60; /* Couleur de fond du bouton */
+    color: white; /* Couleur du texte du bouton */
+    border: none; /* Pas de bordure */
+    padding: 10px; /* Rembourrage pour le bouton */
+    cursor: pointer; /* Curseur en forme de main */
+    border-radius: 5px; /* Coins arrondis */
+    width: 100%; /* Bouton prenant toute la largeur */
+    transition: background-color 0.3s; /* Transition pour le survol */
+  }
+  
+  button:hover {
+    background-color: #219653; /* Couleur du bouton au survol */
+  }
+  
+  .error-message {
+    color: #e74c3c; /* Couleur rouge pour les messages d'erreur */
+    margin-top: 10px; /* Espacement au-dessus du message d'erreur */
+    font-weight: bold; /* Gras pour le texte d'erreur */
+  }

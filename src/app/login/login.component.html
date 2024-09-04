@@ -1,5 +1,5 @@
 <div class="login-container">
-  <h1>Connexion</h1>
+
   <form (ngSubmit)="onSubmit()">
     <div>
       <label for="email">Email</label>
@@ -9,7 +9,7 @@
       <label for="password">Mot de passe</label>
       <input type="password" id="password" [(ngModel)]="password" name="password" required>
     </div>
-    <button type="submit">Se connecter</button>
+    <button type="submit">Je me connecte</button>
     <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div> <!-- Affichage du message d'erreur -->
   </form>
 </div>

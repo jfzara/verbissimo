@@ -1,0 +1,69 @@
+h2 {
+    color: #2c3e50; /* Couleur du titre principal */
+  }
+  
+  h3 {
+    color: #2980b9; /* Couleur du sous-titre */
+  }
+  
+  mat-form-field {
+    width: 100%; /* S'assurer que le champ de formulaire occupe toute la largeur */
+    margin: 10px 0; /* Marge autour du champ de texte */
+  }
+  
+  button {
+    background-color: #4CAF50; /* Couleur de fond verte par défaut */
+    color: white; /* Couleur du texte du bouton */
+    border: none; /* Pas de bordure */
+    padding: 10px; /* Rembourrage pour le bouton */
+    cursor: pointer; /* Curseur en forme de main au survol */
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #388E3C; /* Couleur plus foncée au survol */
+  }
+  
+  input {
+    margin: 10px 0; /* Marge autour du champ de texte */
+    padding: 5px; /* Rembourrage pour le champ de texte */
+  }
+  
+  ul {
+    list-style-type: none; /* Pas de puces pour la liste */
+    padding: 0; /* Pas de rembourrage pour la liste */
+  }
+  
+  li {
+    background-color: #ecf0f1; /* Couleur de fond des éléments de la liste */
+    margin: 5px 0; /* Marge entre les éléments de la liste */
+    padding: 10px; /* Rembourrage pour les éléments de la liste */
+    border-radius: 5px; /* Coins arrondis pour les éléments de la liste */
+  }
+  
+  .verb-list-container {
+    padding: 20px;
+  }
+  
+  .verb-item {
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .verb-item:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .info-message {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #e7f3fe;
+    border: 1px solid #b3d4fc;
+    border-radius: 4px;
+    color: #3178c6;
+    font-weight: bold;
+  }

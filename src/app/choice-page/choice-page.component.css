@@ -1,0 +1,54 @@
+.choice-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    color: white; /* Couleur du texte des boutons */
+    border: none; /* Pas de bordure */
+    padding: 10px 20px; /* Rembourrage pour le bouton */
+    cursor: pointer; /* Curseur en forme de main */
+    border-radius: 5px; /* Coins arrondis */
+    margin: 10px 0; /* Espacement entre les boutons */
+    width: 100%; /* Les boutons prennent toute la largeur */
+    font-size: 16px; /* Taille de police pour le texte des boutons */
+    transition: background-color 0.3s; /* Transition pour le survol */
+  }
+  
+  /* Style pour le bouton de recherche d'un verbe */
+  .search-verb {
+    background-color: #147e2f; /* Couleur de fond pour le bouton "Rechercher un verbe" */
+  }
+  
+  .search-verb:hover {
+    background-color: #005324; /* Couleur du bouton au survol */
+  }
+  
+  /* Style pour le bouton de recherche de verbes aléatoires */
+  .search-random-verbs {
+    background-color:#9b59b6; /* Couleur de fond rouge */
+  }
+  
+  .search-random-verbs:hover {
+    background-color:#853aa3; /* Couleur du bouton au survol */
+  }
+  
+  @media (min-width: 600px) {
+    button {
+      width: auto; /* Pour les écrans plus larges, laisser les boutons à leur taille naturelle */
+    }
+  }

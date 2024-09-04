@@ -1,11 +1,14 @@
 @import '@angular/material/prebuilt-themes/indigo-pink.css';
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: #e8f5e9; /* Vert pâle */
+    color: #2c3e50; /* Couleur du texte pour le contraste */
+    padding-top: 40px;}
 
 mat-card {
     margin: 20px;
     padding: 20px;
     text-align: center;
+    border: 1 px red solid;
   }
 

@@ -1,0 +1,36 @@
+h1 {
+    color:#27ae60; /* Couleur du titre principal */
+    font-size: 3em; /* Taille de la police du titre */
+    text-align: center; /* Centrer le titre */
+    margin-bottom: 10px; /* Marge en bas du titre */
+    font-weight: bold;
+}
+
+h2 {
+    color: #853aa3; /* Couleur du sous-titre */
+    font-size: 1.5em; /* Taille de la police du sous-titre */
+    text-align: center; /* Centrer le sous-titre */
+    margin-bottom: 20px; /* Marge en bas du sous-titre */
+    font-weight: normal; /* Poids de la police normal */
+}
+
+/* Ajoutez une marge autour du composant */
+router-outlet {
+    display: block; /* S'assurer qu'il occupe tout l'espace disponible */
+    margin: 0 auto; /* Centrer le composant */
+    padding: 20px; /* Rembourrage autour du composant */
+    max-width: 800px; /* Largeur maximale pour le composant */
+    border: 1px solid #ddd; /* Bordure légère pour délimiter le composant */
+    border-radius: 8px; /* Coins arrondis */
+    background-color: #f9f9f9; /* Couleur de fond pour le composant */
+}
+
+
+
+
+
+
+
+
+
+
