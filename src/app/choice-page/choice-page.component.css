@@ -24,7 +24,7 @@
     cursor: pointer; /* Curseur en forme de main */
     border-radius: 5px; /* Coins arrondis */
     margin: 10px 0; /* Espacement entre les boutons */
-    width: 100%; /* Les boutons prennent toute la largeur */
+    width: 80%; /* Les boutons prennent toute la largeur */
     font-size: 16px; /* Taille de police pour le texte des boutons */
     transition: background-color 0.3s; /* Transition pour le survol */
   }
@@ -51,4 +51,12 @@
     button {
       width: auto; /* Pour les écrans plus larges, laisser les boutons à leur taille naturelle */
     }
+  }
+
+  .logout {
+    background-color: #e74c3c; /* Couleur de fond rouge pour le bouton de déconnexion */
+  }
+  
+  .logout:hover {
+    background-color: #c0392b; /* Couleur du bouton au survol */
   }

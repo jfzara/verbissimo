@@ -16,4 +16,9 @@ export class ChoicePageComponent {
   searchRandomVerbs() {
     this.router.navigate(['/verb-list']); // Route pour la liste aléatoire de verbes
   }
+
+  logout() {
+    // Logique de déconnexion (si nécessaire)
+    this.router.navigate(['/login']); // Route pour la page de connexion
+  }
 }

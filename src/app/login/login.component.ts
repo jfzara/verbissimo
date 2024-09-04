@@ -3,9 +3,9 @@ import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { MatCardModule } from '@angular/material/card'; // Ajout de MatCardModule
-import { MatInputModule } from '@angular/material/input'; // Ajout de MatInputModule
-import { MatButtonModule } from '@angular/material/button'; // Ajout de MatButtonModule
+import { MatCardModule } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-login',
@@ -13,16 +13,16 @@ import { MatButtonModule } from '@angular/material/button'; // Ajout de MatButto
   imports: [
     FormsModule,
     CommonModule,
-    MatCardModule, // Ajoutez MatCardModule ici
-    MatInputModule, // Ajoutez MatInputModule ici
-    MatButtonModule // Ajoutez MatButtonModule ici
+    MatCardModule,
+    MatInputModule,
+    MatButtonModule
   ],
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  email: string = '';
-  password: string = '';
+  email: string = ''; // Champ d'email vide par défaut
+  password: string = ''; // Champ de mot de passe vide par défaut
   errorMessage: string = '';
 
   constructor(private authService: AuthService, private router: Router) {}
@@ -49,5 +49,12 @@ export class LoginComponent {
         this.errorMessage = 'Adresse e-mail ou mot de passe incorrect.'; // Message d'erreur spécifique
       }
     );
+  }
+
+  // Méthode pour vider les champs du formulaire lors de la déconnexion
+  clearFields() {
+    this.email = '';
+    this.password = '';
+    this.errorMessage = '';
   }
 }

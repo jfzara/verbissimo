@@ -1,45 +1,93 @@
 .signup-container {
-    max-width: 400px; /* Largeur maximale du conteneur */
-    margin: 0 auto; /* Centre le conteneur horizontalement */
-    padding: 20px; /* Ajout de padding pour l'espace interne */
-    border: 1px solid #ccc; /* Bordure légère autour du conteneur */
-    border-radius: 5px; /* Coins arrondis */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre légère pour un effet de profondeur */
-    background-color: #f9f9f9; /* Couleur de fond douce */
-  }
-  
-  h2 {
-    text-align: center; /* Centre le titre */
-    margin-bottom: 20px; /* Espace sous le titre */
-  }
-  
-  .signup-form {
-    display: flex; /* Utilise Flexbox pour un espacement uniforme */
-    flex-direction: column; /* Colonne pour les éléments du formulaire */
-  }
-  
-  label {
-    margin-bottom: 5px; /* Espace sous chaque label */
-    font-weight: bold; /* Met le texte en gras */
-  }
-  
-  input {
-    padding: 10px; /* Ajout de padding à l'intérieur des champs de saisie */
-    margin-bottom: 15px; /* Espace entre les champs */
-    border: 1px solid #ccc; /* Bordure légère pour les champs */
-    border-radius: 3px; /* Coins légèrement arrondis */
-  }
-  
-  .btn-signup {
-    padding: 10px; /* Ajout de padding pour le bouton */
-    background-color: #28a745; /* Couleur de fond verte */
-    color: white; /* Couleur du texte en blanc */
-    border: none; /* Supprime la bordure par défaut */
-    border-radius: 3px; /* Coins arrondis pour le bouton */
-    cursor: pointer; /* Change le curseur en main au survol */
-    transition: background-color 0.3s; /* Transition douce pour le changement de couleur */
-  }
-  
-  .btn-signup:hover {
-    background-color: #218838; /* Couleur de fond plus sombre au survol */
-  }
+  margin: 0 auto; /* Centre le conteneur horizontalement */
+  padding: 20px; /* Ajout de padding pour l'espace interne */
+  border: 1px solid #ccc; /* Bordure légère autour du conteneur */
+  border-radius: 5px; /* Coins arrondis */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre légère pour un effet de profondeur */
+  background-color: #f9f9f9; /* Couleur de fond douce */
+}
+
+h2 {
+  text-align: center; /* Centre le titre */
+  margin-bottom: 20px; /* Espace sous le titre */
+}
+
+.signup-form {
+  display: flex; /* Utilise Flexbox pour un espacement uniforme */
+  flex-direction: column; /* Colonne pour les éléments du formulaire */
+}
+
+label {
+  margin-bottom: 5px; /* Espace sous chaque label */
+  font-weight: bold; /* Met le texte en gras */
+}
+
+input {
+  padding: 10px; /* Ajout de padding à l'intérieur des champs de saisie */
+  margin-bottom: 15px; /* Espace entre les champs */
+  border: 1px solid #ccc; /* Bordure légère pour les champs */
+  border-radius: 3px; /* Coins légèrement arrondis */
+}
+
+.btn-signup {
+  padding: 10px; /* Ajout de padding pour le bouton */
+  background-color: #28a745; /* Couleur de fond verte */
+  color: white; /* Couleur du texte en blanc */
+  border: none; /* Supprime la bordure par défaut */
+  border-radius: 3px; /* Coins arrondis pour le bouton */
+  cursor: pointer; /* Change le curseur en main au survol */
+  transition: background-color 0.3s; /* Transition douce pour le changement de couleur */
+}
+
+.btn-signup:hover {
+  background-color: #218838; /* Couleur de fond plus sombre au survol */
+}
+
+.error-message {
+  color: #e74c3c;
+  background-color: #f9ebea;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.btn-signup {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+mat-error {
+  font-size: 12px;
+  color: #e74c3c;
+}
+
+.success-message {
+  color: #28a745;
+  background-color: #dff0d8;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+button {
+  background-color: #27ae60; /* Couleur de fond du bouton */
+  color: white; /* Couleur du texte du bouton */
+  border: none; /* Pas de bordure */
+  padding: 10px; /* Rembourrage pour le bouton */
+  cursor: pointer; /* Curseur en forme de main */
+  border-radius: 5px; /* Coins arrondis */
+  width: 100%; /* Bouton prenant toute la largeur */
+  transition: background-color 0.3s; /* Transition pour le survol */
+}
+
+button:hover {
+  background-color: #219653; /* Couleur du bouton au survol */
+}

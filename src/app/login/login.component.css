@@ -10,10 +10,10 @@ body {
     flex-direction: column;
     padding: 20px;
     margin: 0 auto;
-    max-width: 400px; /* Limiter la largeur pour le rendre plus compact */
+
     background-color: white; /* Fond blanc pour le formulaire */
     border-radius: 8px; /* Coins arrondis */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    
   }
   
   form {
@@ -50,7 +50,7 @@ body {
     padding: 10px; /* Rembourrage pour le bouton */
     cursor: pointer; /* Curseur en forme de main */
     border-radius: 5px; /* Coins arrondis */
-    width: 100%; /* Bouton prenant toute la largeur */
+    
     transition: background-color 0.3s; /* Transition pour le survol */
   }
   
