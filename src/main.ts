@@ -9,7 +9,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 
 bootstrapApplication(AppComponent, {
   providers: [
-    importProvidersFrom(BrowserModule), // Correction : ajout de l'import pour BrowserModule
+    importProvidersFrom(BrowserModule), 
     importProvidersFrom(HttpClientModule),
     importProvidersFrom(VerbModule),
     importProvidersFrom(AppRoutingModule), provideAnimationsAsync()

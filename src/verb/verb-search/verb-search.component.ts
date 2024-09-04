@@ -43,8 +43,8 @@ export class VerbSearchComponent {
     );
   }
 
-  // Méthode pour retourner à la page de choix
+ 
   goToChoicePage() {
-    this.router.navigate(['/choice']); // Remplacez '/choice' par le chemin de votre page de choix
+    this.router.navigate(['/choice']);
   }
 }

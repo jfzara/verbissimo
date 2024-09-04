@@ -14,20 +14,16 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
-// Importation des composants
 import { VerbListComponent } from '../verb/verb-list/verb-list.component';
 import { VerbRandomComponent } from './verb-random/verb-random.component';
-import { VerbSearchComponent } from '../verb/verb-search/verb-search.component'; // Ajouté ici
+import { VerbSearchComponent } from '../verb/verb-search/verb-search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     VerbListComponent,
     VerbRandomComponent,
-    VerbSearchComponent, // Ajouté ici
-    // AuthComponent, // Retiré de ici
-    // SignUpComponent, // Retiré de ici
-    // LoginComponent // Retiré de ici
+    VerbSearchComponent
   ],
   imports: [
     BrowserModule,

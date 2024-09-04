@@ -28,7 +28,7 @@ export class SignUpComponent {
   name: string = '';
   password: string = '';
   errorMessage: string = '';
-  successMessage: string = ''; // Message de succès
+  successMessage: string = '';
 
   @Output() signedUp = new EventEmitter<void>();
 
@@ -40,17 +40,13 @@ export class SignUpComponent {
         console.log('Inscription réussie', response);
         localStorage.setItem('userName', this.name);
         this.successMessage = "Inscription réussie ! Vous pouvez maintenant vous connecter.";
-        this.errorMessage = ''; // Masquer le message d'erreur s'il y en avait un
-        this.signedUp.emit(); // Émettez l'événement d'inscription réussie
-        
-        // Ne plus rediriger ici, laissez le composant parent gérer cela
+        this.errorMessage = '';
+        this.signedUp.emit();
       },
       error => {
         this.errorMessage = "Erreur lors de l'inscription. Veuillez réessayer.";
         console.error(this.errorMessage, error);
-        this.successMessage = ''; // Masquer le message de succès s'il y en avait un
-
-        // Réinitialiser les champs
+        this.successMessage = '';
         this.email = '';
         this.name = '';
         this.password = '';
@@ -59,7 +55,6 @@ export class SignUpComponent {
   }
 
   redirectToLogin() {
-    this.router.navigate(['/']); // Assurez-vous que cela redirige vers la page de connexion
+    this.router.navigate(['/']);
   }
 }
- 

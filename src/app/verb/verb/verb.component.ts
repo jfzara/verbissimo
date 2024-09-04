@@ -12,15 +12,15 @@ import { FormsModule } from '@angular/forms';
   imports: [CommonModule, FormsModule]
 })
 export class VerbComponent {
-  numberOfVerbs: number = 2; // Valeur par défaut
+  numberOfVerbs: number = 2;
   randomVerbs: string[] = [];
-  selectedVerb?: string; // Le verbe sélectionné par l'utilisateur
+  selectedVerb?: string;
   errorMessage: string = '';
-  conjugation: any; // Déclaration de la variable pour stocker la conjugaison
-  token: string | null; // Déclaration de la variable pour le token
+  conjugation: any;
+  token: string | null;
 
   constructor(public verbService: VerbService, public router: Router) {
-    this.token = localStorage.getItem('userToken'); // Récupérer le token depuis le localStorage
+    this.token = localStorage.getItem('userToken');
   }
 
   fetchRandomVerbs() {
@@ -28,7 +28,7 @@ export class VerbComponent {
 
     if (this.numberOfVerbs < 2 || this.numberOfVerbs > 20) {
       this.errorMessage = 'Veuillez choisir un nombre entre 2 et 20.';
-      this.randomVerbs = []; // Réinitialiser la liste en cas d'erreur
+      this.randomVerbs = [];
       console.log(this.errorMessage);
       return;
     }
@@ -39,13 +39,12 @@ export class VerbComponent {
       return;
     }
 
-    // Appeler le service pour obtenir des verbes aléatoires
     this.verbService.getRandomVerbs(this.numberOfVerbs, this.token).subscribe(
       response => {
         console.log('Verbes récupérés:', response);
-        this.randomVerbs = response.verbs; // Assurez-vous d'accéder à la bonne propriété
-        this.errorMessage = ''; // Réinitialiser le message d'erreur
-        this.selectedVerb = undefined; // Réinitialiser le verbe sélectionné
+        this.randomVerbs = response.verbs;
+        this.errorMessage = '';
+        this.selectedVerb = undefined;
       },
       error => {
         console.error('Erreur lors de la récupération des verbes', error);
@@ -62,8 +61,8 @@ export class VerbComponent {
 
     this.verbService.getConjugation(verb, this.token).subscribe(
       data => {
-        this.conjugation = data; // Stocker la conjugaison
-        console.log(this.conjugation); // Vous pouvez afficher cela dans un modal ou un encadré
+        this.conjugation = data;
+        console.log(this.conjugation);
       },
       error => {
         console.error('Erreur lors de la récupération de la conjugaison', error);
@@ -71,4 +70,4 @@ export class VerbComponent {
       }
     );
   }
-}g
+}

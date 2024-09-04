@@ -1,95 +1,91 @@
 h2 {
-    color: #2c3e50; /* Couleur du titre principal */
-  }
-  
-  h3 {
-    color: #2980b9; /* Couleur du sous-titre */
-  }
-  
-  mat-form-field {
-    width: 100%; /* S'assurer que le champ de formulaire occupe toute la largeur */
-    margin: 10px 0; /* Marge autour du champ de texte */
-  }
-  
-  .back-button {
-    background-color: #e74c3c; /* Couleur de fond rouge */
-    color: white; /* Couleur du texte */
-    border: none; /* Pas de bordure */
-    padding: 10px 20px; /* Rembourrage pour le bouton */
-    cursor: pointer; /* Curseur en forme de main au survol */
-    border-radius: 5px; /* Coins arrondis */
-    margin: 20px 0; /* Marge en haut et en bas pour espacer les boutons */
-    display: block; /* Le bouton sera un élément de bloc */
-    text-align: center; /* Centrer le texte */
-    transition: background-color 0.3s; /* Transition pour l'effet au survol */
-    font-size: 16px;
-  }
-  
-  .back-button:hover {
-    background-color: #c0392b; /* Couleur plus foncée au survol */
-  }
+  color: #2c3e50;
+}
 
-  input {
-    margin: 10px 0; /* Marge autour du champ de texte */
-    padding: 5px; /* Rembourrage pour le champ de texte */
-  }
-  
-  ul {
-    list-style-type: none; /* Pas de puces pour la liste */
-    padding: 0; /* Pas de rembourrage pour la liste */
-  }
-  
-  li {
-    background-color: #ecf0f1; /* Couleur de fond des éléments de la liste */
-    margin: 5px 0; /* Marge entre les éléments de la liste */
-    padding: 10px; /* Rembourrage pour les éléments de la liste */
-    border-radius: 5px; /* Coins arrondis pour les éléments de la liste */
-  }
-  
-  .verb-list-container {
-    padding: 20px;
-    
-  }
-  
-  .verb-item {
-    cursor: pointer;
-    padding: 10px;
-    border: 1px solid #ddd;
-    margin-bottom: 5px;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-  }
-  
-  .verb-item:hover {
-    background-color: #f0f0f0;
-  }
-  
-  .info-message {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #e7f3fe;
-    border: 1px solid #b3d4fc;
-    border-radius: 4px;
-    color: #3178c6;
-    font-weight: bold;
-  }
-  .search-verb {
-    color: white; /* Couleur du texte des boutons */
-    border: none; /* Pas de bordure */
-    padding: 10px 20px; /* Rembourrage pour le bouton */
-    cursor: pointer; /* Curseur en forme de main */
-    border-radius: 5px; /* Coins arrondis */
-    margin: 10px 0; /* Espacement entre les boutons */
-    width: auto; /* Les boutons prennent toute la largeur */
-    font-size: 16px; /* Taille de police pour le texte des boutons */
-    transition: background-color 0.3s; /* Transition pour le survol */
-    background-color: #147e2f; /* Couleur de fond pour le bouton "Rechercher un verbe" */
-    color: white;
-  }
-  
-  .search-verb:hover {
-    background-color: #005324; /* Couleur du bouton au survol */
-  }
+h3 {
+  color: #2980b9;
+}
 
+mat-form-field {
+  width: 100%;
+  margin: 10px 0;
+}
 
-  
+.back-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 20px 0;
+  display: block;
+  text-align: center;
+  transition: background-color 0.3s;
+  font-size: 16px;
+}
+
+.back-button:hover {
+  background-color: #c0392b;
+}
+
+input {
+  margin: 10px 0;
+  padding: 5px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #ecf0f1;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.verb-list-container {
+  padding: 20px;
+}
+
+.verb-item {
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.verb-item:hover {
+  background-color: #f0f0f0;
+}
+
+.info-message {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #e7f3fe;
+  border: 1px solid #b3d4fc;
+  border-radius: 4px;
+  color: #3178c6;
+  font-weight: bold;
+}
+
+.search-verb {
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 10px 0;
+  width: auto;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  background-color: #147e2f;
+}
+
+.search-verb:hover {
+  background-color: #005324;
+}

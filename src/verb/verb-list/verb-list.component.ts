@@ -3,9 +3,9 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { Router } from '@angular/router';
-import { VerbService } from '../../app/services/verb.service'; // Assurez-vous que le chemin est correct
-import { CommonModule } from '@angular/common'; // Importation nécessaire
-import { FormsModule } from '@angular/forms'; // Importation nécessaire
+import { VerbService } from '../../app/services/verb.service'; 
+import { CommonModule } from '@angular/common'; 
+import { FormsModule } from '@angular/forms'; 
 import { VerbConjugationComponent } from '../../app/verb-conjugation/verb-conjugation.component';
 
 @Component({
@@ -13,7 +13,7 @@ import { VerbConjugationComponent } from '../../app/verb-conjugation/verb-conjug
   standalone: true,
   templateUrl: './verb-list.component.html',
   styleUrls: ['./verb-list.component.css'],
-  imports: [MatCardModule, MatFormFieldModule, MatInputModule, CommonModule, FormsModule, VerbConjugationComponent] // Ajoutez ici
+  imports: [MatCardModule, MatFormFieldModule, MatInputModule, CommonModule, FormsModule, VerbConjugationComponent] 
 })
 export class VerbListComponent {
   numberOfVerbs: number = 2;
@@ -51,6 +51,6 @@ export class VerbListComponent {
   }
 
   goToChoicePage() {
-    this.router.navigate(['/choice']); // Remplacez '/choice' par le chemin de votre page de choix
+    this.router.navigate(['/choice']); 
   }
 }

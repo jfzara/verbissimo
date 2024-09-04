@@ -21,8 +21,8 @@ import { MatButtonModule } from '@angular/material/button';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  email: string = ''; // Champ d'email vide par défaut
-  password: string = ''; // Champ de mot de passe vide par défaut
+  email: string = '';
+  password: string = '';
   errorMessage: string = '';
 
   constructor(private authService: AuthService, private router: Router) {}
@@ -38,20 +38,19 @@ export class LoginComponent {
         console.log('Connexion réussie', response);
         if (response && response.token) {
           localStorage.setItem('userToken', response.token);
-          this.router.navigate(['/choice']); // Rediriger vers la page de choix
-          this.errorMessage = ''; // Réinitialiser le message d'erreur
+          this.router.navigate(['/choice']);
+          this.errorMessage = '';
         } else {
-          this.errorMessage = 'Erreur lors de la connexion. Veuillez réessayer.'; // Message d'erreur générique
+          this.errorMessage = 'Erreur lors de la connexion. Veuillez réessayer.';
         }
       },
       error => {
         console.error('Erreur lors de la connexion', error);
-        this.errorMessage = 'Adresse e-mail ou mot de passe incorrect.'; // Message d'erreur spécifique
+        this.errorMessage = 'Adresse e-mail ou mot de passe incorrect.';
       }
     );
   }
 
-  // Méthode pour vider les champs du formulaire lors de la déconnexion
   clearFields() {
     this.email = '';
     this.password = '';

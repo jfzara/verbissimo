@@ -7,14 +7,13 @@ import { catchError } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class VerbService {
-  private apiUrl = 'https://seal-app-v5cj7.ondigitalocean.app/v0/verbs/'; // URL de l'API
+  private apiUrl = 'https://seal-app-v5cj7.ondigitalocean.app/v0/verbs/';
 
   constructor(private http: HttpClient) { }
 
-  // Méthode pour récupérer des informations sur un verbe spécifique
   getVerbs(verb: string, token: string): Observable<any> {
     const headers = new HttpHeaders({
-      'x-access-token': token // Ajoute le token d'authentification dans les en-têtes
+      'x-access-token': token
     });
 
     return this.http.post<any>(this.apiUrl, { verb }, { headers }).pipe(
@@ -25,10 +24,9 @@ export class VerbService {
     );
   }
 
-  // Méthode pour obtenir des verbes aléatoires
   getRandomVerbs(quantity: number, token: string): Observable<any> {
     const headers = new HttpHeaders({
-      'x-access-token': token // Ajoute le token d'authentification dans les en-têtes
+      'x-access-token': token
     });
   
     return this.http.post(`${this.apiUrl}random`, { quantity }, { headers }).pipe(

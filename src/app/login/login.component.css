@@ -1,65 +1,62 @@
 body {
-    background-color: #f0f4f8; /* Une couleur de fond légère et agréable */
-    font-family: 'Arial', sans-serif; /* Police agréable */
-  }
-  
-  .login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px;
-    margin: 0 auto;
+  background-color: #f0f4f8;
+  font-family: 'Arial', sans-serif;
+}
 
-    background-color: white; /* Fond blanc pour le formulaire */
-    border-radius: 8px; /* Coins arrondis */
-    
-  }
-  
-  form {
-    width: 100%; /* S'assurer que le formulaire occupe toute la largeur */
-  }
-  
-  div {
-    margin-bottom: 15px; /* Espacement entre les champs */
-  }
-  
-  label {
-    display: block; /* S'assurer que le label prend toute la largeur */
-    margin-bottom: 5px; /* Espacement sous le label */
-    color: #2c3e50; /* Couleur du texte */
-  }
-  
-  input {
-    width: 100%; /* Champ d'entrée prenant toute la largeur */
-    padding: 10px; /* Rembourrage pour les champs d'entrée */
-    border: 1px solid #ccc; /* Bordure grise */
-    border-radius: 4px; /* Coins arrondis */
-    transition: border-color 0.3s; /* Transition pour les interactions */
-  }
-  
-  input:focus {
-    border-color: #27ae60; /* Couleur de la bordure au focus */
-    outline: none; /* Supprimer le contour par défaut */
-  }
-  
-  button {
-    background-color: #27ae60; /* Couleur de fond du bouton */
-    color: white; /* Couleur du texte du bouton */
-    border: none; /* Pas de bordure */
-    padding: 10px; /* Rembourrage pour le bouton */
-    cursor: pointer; /* Curseur en forme de main */
-    border-radius: 5px; /* Coins arrondis */
-    
-    transition: background-color 0.3s; /* Transition pour le survol */
-  }
-  
-  button:hover {
-    background-color: #219653; /* Couleur du bouton au survol */
-  }
-  
-  .error-message {
-    color: #e74c3c; /* Couleur rouge pour les messages d'erreur */
-    margin-top: 10px; /* Espacement au-dessus du message d'erreur */
-    font-weight: bold; /* Gras pour le texte d'erreur */
-  }
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 8px;
+}
+
+form {
+  width: 100%;
+}
+
+div {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #2c3e50;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #27ae60;
+  outline: none;
+}
+
+button {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #219653;
+}
+
+.error-message {
+  color: #e74c3c;
+  margin-top: 10px;
+  font-weight: bold;
+}

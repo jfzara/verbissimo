@@ -3,61 +3,60 @@
 }
 
 h2 {
-  color: #2c3e50; /* Couleur du titre principal */
+  color: #2c3e50;
 }
 
 h3 {
-  color: #2980b9; /* Couleur du sous-titre */
+  color: #2980b9;
 }
 
 input {
-  margin: 10px 0; /* Marge autour du champ de texte */
-  padding: 5px; /* Rembourrage pour le champ de texte */
+  margin: 10px 0;
+  padding: 5px;
 }
 
 .back-button {
-  background-color: #e74c3c; /* Couleur de fond rouge */
-  color: white; /* Couleur du texte */
-  border: none; /* Pas de bordure */
-  padding: 10px 20px; /* Rembourrage pour le bouton */
-  cursor: pointer; /* Curseur en forme de main au survol */
-  border-radius: 5px; /* Coins arrondis */
-  margin: 20px 0; /* Marge en haut et en bas pour espacer les boutons */
-  display: block; /* Le bouton sera un élément de bloc */
-  text-align: center; /* Centrer le texte */
-  transition: background-color 0.3s; /* Transition pour l'effet au survol */
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 20px 0;
+  display: block;
+  text-align: center;
+  transition: background-color 0.3s;
   font-size: 16px;
 }
 
 .back-button:hover {
-  background-color: #c0392b; /* Couleur plus foncée au survol */
+  background-color: #c0392b;
 }
 
-/* Style du bouton "Obtenir verbes aléatoires" */
 .get-verbs-button {
-  background-color:#853aa3; /* Couleur de fond verte */
-  color: white; /* Couleur du texte */
-  border: none; /* Pas de bordure */
-  padding: 10px; /* Rembourrage pour le bouton */
-  cursor: pointer; /* Curseur en forme de main au survol */
-  border-radius: 5px; /* Coins arrondis */
+  background-color: #853aa3;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
   font-size: 16px;
 }
 
 .get-verbs-button:hover {
-  background-color:#853aa3; /* Couleur plus foncée au survol */
+  background-color: #853aa3;
 }
 
 ul {
-  list-style-type: none; /* Pas de puces pour la liste */
-  padding: 0; /* Pas de rembourrage pour la liste */
+  list-style-type: none;
+  padding: 0;
 }
 
 li {
-  background-color: #ecf0f1; /* Couleur de fond des éléments de la liste */
-  margin: 5px 0; /* Marge entre les éléments de la liste */
-  padding: 10px; /* Rembourrage pour les éléments de la liste */
-  border-radius: 5px; /* Coins arrondis pour les éléments de la liste */
+  background-color: #ecf0f1;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .verb-item {
@@ -70,6 +69,8 @@ li {
 }
 
 .verb-item:hover {
+  background-color: #dcdcdc; /* Exemple de couleur au survol */
+}hover {
   background-color: #f0f0f0;
 }
 
