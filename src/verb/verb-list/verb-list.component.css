@@ -26,6 +26,7 @@ input {
   display: block; /* Le bouton sera un élément de bloc */
   text-align: center; /* Centrer le texte */
   transition: background-color 0.3s; /* Transition pour l'effet au survol */
+  font-size: 16px;
 }
 
 .back-button:hover {
@@ -40,6 +41,7 @@ input {
   padding: 10px; /* Rembourrage pour le bouton */
   cursor: pointer; /* Curseur en forme de main au survol */
   border-radius: 5px; /* Coins arrondis */
+  font-size: 16px;
 }
 
 .get-verbs-button:hover {

@@ -4,10 +4,10 @@
       <h2>Recherche de Verbe</h2>
     </mat-card-header>
     <mat-card-content>
-      <button  (click)="goToChoicePage()">Retour à la page de choix</button>
+      <button class="back-button"  (click)="goToChoicePage()">Revenir aux choix</button>
 
       <mat-form-field appearance="fill">
-        <mat-label>Entrez un verbe</mat-label>
+        <mat-label >Entrez un verbe</mat-label>
         <input
           matInput
           [(ngModel)]="verb"
@@ -17,7 +17,7 @@
         />
       </mat-form-field>
 
-      <button  color="primary" (click)="searchVerb()">
+      <button class="search-verb" color="primary" (click)="searchVerb()">
         Rechercher
       </button>
 

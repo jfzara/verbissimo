@@ -24,7 +24,7 @@ export class AuthComponent {
 
   constructor(private authService: AuthService, private router: Router) {
     // Vérifiez si l'utilisateur est connecté au moment de l'initialisation
-    this.isLoggedIn = this.authService.isLoggedIn(); // Implémentez cette méthode dans AuthService
+    this.isLoggedIn = this.authService.isLoggedIn(); 
   }
 
   toggleForm() {
@@ -35,5 +35,21 @@ export class AuthComponent {
     this.authService.logout(); // Appel au service d'authentification pour se déconnecter
     this.isLoggedIn = false; // Mettre à jour l'état de connexion
     this.router.navigate(['/']); // Redirection vers la page d'accueil
+  }
+
+  // Méthode pour gérer la connexion
+  login(email: string, password: string) {
+    this.authService.login(email, password).subscribe({
+      next: (response) => {
+        // Stockez le token si la connexion est réussie
+        this.authService.setToken(response.token);
+        this.isLoggedIn = true; // Mettez à jour l'état de connexion
+        this.router.navigate(['/']); // Redirection après connexion
+      },
+      error: (error) => {
+        console.error('Erreur de connexion:', error);
+        // Gérez les erreurs de connexion ici (affichage d'un message d'erreur, par exemple)
+      }
+    });
   }
 }

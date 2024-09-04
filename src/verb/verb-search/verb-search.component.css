@@ -11,19 +11,24 @@ h2 {
     margin: 10px 0; /* Marge autour du champ de texte */
   }
   
-  button {
-    background-color: #4CAF50; /* Couleur de fond verte par défaut */
-    color: white; /* Couleur du texte du bouton */
+  .back-button {
+    background-color: #e74c3c; /* Couleur de fond rouge */
+    color: white; /* Couleur du texte */
     border: none; /* Pas de bordure */
-    padding: 10px; /* Rembourrage pour le bouton */
+    padding: 10px 20px; /* Rembourrage pour le bouton */
     cursor: pointer; /* Curseur en forme de main au survol */
-    border-radius: 5px;
+    border-radius: 5px; /* Coins arrondis */
+    margin: 20px 0; /* Marge en haut et en bas pour espacer les boutons */
+    display: block; /* Le bouton sera un élément de bloc */
+    text-align: center; /* Centrer le texte */
+    transition: background-color 0.3s; /* Transition pour l'effet au survol */
+    font-size: 16px;
   }
   
-  button:hover {
-    background-color: #388E3C; /* Couleur plus foncée au survol */
+  .back-button:hover {
+    background-color: #c0392b; /* Couleur plus foncée au survol */
   }
-  
+
   input {
     margin: 10px 0; /* Marge autour du champ de texte */
     padding: 5px; /* Rembourrage pour le champ de texte */
@@ -43,6 +48,7 @@ h2 {
   
   .verb-list-container {
     padding: 20px;
+    
   }
   
   .verb-item {
@@ -67,3 +73,23 @@ h2 {
     color: #3178c6;
     font-weight: bold;
   }
+  .search-verb {
+    color: white; /* Couleur du texte des boutons */
+    border: none; /* Pas de bordure */
+    padding: 10px 20px; /* Rembourrage pour le bouton */
+    cursor: pointer; /* Curseur en forme de main */
+    border-radius: 5px; /* Coins arrondis */
+    margin: 10px 0; /* Espacement entre les boutons */
+    width: auto; /* Les boutons prennent toute la largeur */
+    font-size: 16px; /* Taille de police pour le texte des boutons */
+    transition: background-color 0.3s; /* Transition pour le survol */
+    background-color: #147e2f; /* Couleur de fond pour le bouton "Rechercher un verbe" */
+    color: white;
+  }
+  
+  .search-verb:hover {
+    background-color: #005324; /* Couleur du bouton au survol */
+  }
+
+
+  
